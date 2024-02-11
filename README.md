@@ -1,5 +1,5 @@
-# kanno-release
-作成したソースコードの例です。研究に直接関わるものの掲載はしません。
+# オートエンコーダを用いた災害ハザードマップ予測回路の開発
+
 
 
 ##  music_box_firmware
@@ -50,30 +50,6 @@ https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny24A-44A-84A-DataSheet-DS4
 
 
 ### Demo
-
-
-・音量調整
-
-
-https://github.com/Kanno-LSI/kanno-release/assets/131650927/4da8ea1e-928b-4b66-a706-c1da31aba304
-
-
-
-・速度調整
-
-
-https://github.com/Kanno-LSI/kanno-release/assets/131650927/bbb4786a-402c-4814-be5b-aeb86c2debef
-
-
-
-
-・曲予約、変更
-
-
-https://github.com/Kanno-LSI/kanno-release/assets/131650927/a97ea5ec-9d24-463b-b624-c405723bfe3d
-
-
-https://github.com/Kanno-LSI/kanno-release/assets/131650927/1132a6b8-ee2e-4fd3-b4c8-58486e6cbdd3
 
 
 
