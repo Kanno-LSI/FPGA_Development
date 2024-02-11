@@ -10,20 +10,13 @@ FPGAのZynq ZCU104を用いた災害ハザードマップシステムです。
 
 研究で使用し始めたFPGAの開発方法を学ぶとともに、チーム開発の一連の流れを掴むことを目的として開発を行いました。
 
-
-
-
-
 〇システム内容
 
 PL部：オートエンコーダによる計算回路
 
 PS部：ハザードマップの3D表示用アプリケーション
 
-大学の講義のTAとして学生向けに電子工作の例を紹介する目的で製作しました。
-このオルゴールは2曲収録しており、スイッチやボリューム抵抗によって曲の種類、速度、音量を変えることができます。
-
-![image](https://github.com/Kanno-LSI/kanno-release/assets/131650927/bc3bb318-d4a2-494e-babf-89755134a06e)
+![image](https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/0fdb45fc-72fe-45e8-8cc1-3c2e886d5b47)
 
 
 #### 〇　Function
