@@ -18,7 +18,11 @@ PS部：ハザードマップの3D表示用アプリケーション
 
 <div align="center">
     <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/a98ee72b-df89-44f0-9c5e-6640cc0617d4" width="500">
+    <br> <!--改行-->
+    <b>3Dハザードマップ</b> <!--テキスト表示-->
 </div>
+
+
 
 
 
