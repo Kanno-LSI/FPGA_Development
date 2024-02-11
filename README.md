@@ -16,7 +16,8 @@ PL部：オートエンコーダによる計算回路
 
 PS部：ハザードマップの3D表示用アプリケーション
 
-![image](https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/0fdb45fc-72fe-45e8-8cc1-3c2e886d5b47)
+![ハザードマップ3×3](https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/a98ee72b-df89-44f0-9c5e-6640cc0617d4)
+
 
 
 #### 〇　Function
