@@ -1,8 +1,6 @@
-# オートエンコーダを用いた災害ハザードマップ予測回路
+# Knnno_LSI Design Contest
 
-
-
-##  music_box_firmware
+## オートエンコーダを用いた災害ハザードマップ予測回路
 
 ### Description
 マイクロプロセッサによるオルゴール用ファームウェアです。
