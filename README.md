@@ -61,14 +61,3 @@ https://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny24A-44A-84A-DataSheet-DS4
 
 ### Demo
 
-
-
-
-
-・収録曲(Happy Birthday以外)
-
-
-https://github.com/Kanno-LSI/kanno-release/assets/131650927/c7eec12a-0e51-497d-b69c-a14a913cedd4
-
-
-https://github.com/Kanno-LSI/kanno-release/assets/131650927/5c1d4d4f-08de-40ac-94a4-8de664c31c7a
