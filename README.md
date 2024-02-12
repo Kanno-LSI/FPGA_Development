@@ -55,9 +55,11 @@ AMD-Xilinx社製FPGAのZynqを使用しました。本評価ボードはFPGAに�
 
 |  |  |
 |-----------|-----------|
-| メンバー1 | データセット作成 (Python) <br> オートエンコーダの学習部 (Python) |
-| メンバー2  | オートエンコーダ推論部の回路 (VHDL) <br> 計算部分の回路シミュレーション (VHDL)|
-| 筆者  | 通信回路、ステートマシン (VHDL) <br> 回路全体のコーディング <br> システムアプリケーション (Python) <br> 実機動作|
+| FPGA | Zynq Ultra Scale+ <br> MPSoC ZCU104 |
+| Logic Cell | 504,000 |
+| DSP Slice  | 1,728 |
+| Bram  | 11[Mb] |
+| 開発環境  | Vivado 2023.1 |
 
 ### PS部とPL部の役割
 
