@@ -120,7 +120,11 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 
 ![通信回路](https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/71363d4b-4914-4d69-9a31-766eb0d2c88f)
 
+具体的なモジュールの中身は編集中
+
 #### 入出力回路
+
+ここから
 
 ![入出力回路](https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/50f7e387-8b16-4324-9555-5fd8c8d9f6b2)
 
