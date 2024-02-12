@@ -1,5 +1,5 @@
 # FPGA Development
-FPGAによるシステム開発です。LSI Design Contestでのチーム開発の内容を説明しています。
+FPGAによるシステム開発です。10月から1月まで取り組んだLSI Design Contestでのチーム開発の内容を説明しています。
 <br><br><br><br>
 ## オートエンコーダを用いた災害ハザードマップ予測回路
 
