@@ -3,12 +3,6 @@ FPGAによるシステム開発です。2023年10月から2024年1月まで取�
 <br><br><br><br>
 ## オートエンコーダを用いた災害ハザードマップ予測回路
 
-<div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/a98ee72b-df89-44f0-9c5e-6640cc0617d4" width="500">
-    <br> <!--改行-->
-    <b>3Dハザードマップ</b> <!--テキスト表示-->
-</div>
-
 ## 目次
 - [1.概要](#1-概要)
   - [目的](#〇-目的)
@@ -24,6 +18,12 @@ FPGAによるシステム開発です。2023年10月から2024年1月まで取�
 FPGAのZynq ZCU104を用いた災害ハザードマップシステムです。
 
 標高情報から、機械学習の１つである「オートエンコーダ」を介して危険地帯の予測を行い、地形データと合わせてハザードマップの3D表示を行います。
+
+<div align="center">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/a98ee72b-df89-44f0-9c5e-6640cc0617d4" width="500">
+    <br> <!--改行-->
+    <b>3Dハザードマップ</b> <!--テキスト表示-->
+</div>
 
 ### 〇 目的
 
