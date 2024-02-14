@@ -191,11 +191,13 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 ## 6 工夫点
 
 ## 7 参考文献
-[1]AMD-Xilinx: Zynq UltraScale+ MPSoC ZCU104 評価キット
-https://japan.xilinx.com/products/boards-and-kits/zcu104.html
-[2] PYNQ: PYTHON PRODUCTIVITY
+[1]AMD-Xilinx: Zynq UltraScale+ MPSoC ZCU104 評価キット, 
+(https://japan.xilinx.com/products/boards-and-kits/zcu104.html)
+
+[2] PYNQ: PYTHON PRODUCTIVITY, 
 (http://www.pynq.io/)
-[3] Vivado Design Suite: AXI リファレンス ガイド (UG1037)
+
+[3] Vivado Design Suite: AXI リファレンス ガイド(UG1037), 
 (https://docs.xilinx.com/v/u/ja-JP/ug1037-vivado-axi-reference-guide)
 
 [1] 千葉市役所：千葉市地震・風水害ハザードマップ 
