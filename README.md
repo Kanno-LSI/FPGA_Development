@@ -1,5 +1,5 @@
 # FPGA Development
-FPGAによるシステム開発です。2023年10月から2024年1月まで取り組んだチーム開発の内容を説明しています。
+FPGAによるシステム開発です。2023年10月から2024年2月まで取り組んだチーム開発の内容を説明しています。
 <br><br><br><br>
 ## オートエンコーダを用いた災害ハザードマップ予測回路
 
@@ -188,8 +188,15 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 
 ![土砂災害と洪水](https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/477e1491-4d58-4d2c-8388-f031088fb845)
 
-## 6 参考文献
+## 6 工夫点
+
+## 7 参考文献
+[1]AMD-Xilinx: Zynq UltraScale+ MPSoC ZCU104 評価キット
 https://japan.xilinx.com/products/boards-and-kits/zcu104.html
+[2] PYNQ: PYTHON PRODUCTIVITY
+(http://www.pynq.io/)
+[3] Vivado Design Suite: AXI リファレンス ガイド (UG1037)
+(https://docs.xilinx.com/v/u/ja-JP/ug1037-vivado-axi-reference-guide)
 
 [1] 千葉市役所：千葉市地震・風水害ハザードマップ 
 (https://www.city.chiba.jp/other/jf_hazardmap/map.html?lay=saigai_12)
@@ -206,12 +213,5 @@ iri41051.html)
    (https://fgd.gsi.go.jp/download/menu.php)
 [6] Keras Documentation.
    (https://keras.io/ja/)
-[7] PYNQ: PYTHON PRODUCTIVITY
-(http://www.pynq.io/)
-[8] Vivado Design Suite: AXI リファレンス ガイド (UG1037)
-(https://docs.xilinx.com/v/u/ja-JP/ug1037-vivado-axi-reference-guide)
-[9] PYNQ: Python productivity for Adaptive Computing platforms
-(https://pynq.readthedocs.io/en/latest/pynq_libraries/dma.html)
-
 
 
