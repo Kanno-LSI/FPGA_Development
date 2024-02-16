@@ -265,12 +265,32 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 最後に災害ハザードマップ予測回路システムでの出力結果を説明します。今回は①土砂災害、②洪水、③津波の学習を行い、それぞれ取得した重みとバイアスから結果を取得しています。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/477e1491-4d58-4d2c-8388-f031088fb845" width="500">
+    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/03471c6d-66b0-4c99-b589-6ee54aa079ac" width="500">
     <br> <!--改行-->
-    <b>洪水と土砂災害のハザードマップ</b> <!--テキスト表示-->
+    <b>土砂災害のハザードマップ</b> <!--テキスト表示-->
+</div>
+
+<div align="center">
+    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/c394591c-746e-4495-9091-8d346bfb45fd" width="500">
+    <br> <!--改行-->
+    <b>洪水のハザードマップ</b> <!--テキスト表示-->
+</div>
+
+<div align="center">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/a98ee72b-df89-44f0-9c5e-6640cc0617d4" width="500">
+    <br> <!--改行-->
+    <b>津波のハザードマップ</b> <!--テキスト表示-->
 </div>
 
 ## 6 工夫点
+### 入出力データに適した通信回路の設計
+データ容量の大きい標高データと危険地帯データにはAXI-4 Streamによる連続転送（バースト転送）を行う回路、複数種類の制御信号にはAXI-4 Liteによるアドレス指定を行える回路を個別で設計しました。これにより、ハードウェア側とソフトウェア側の間で高速なデータ転送と適切な信号制御の両方を行うことができました。
+
+### オートエンコーダのパイプライン処理
+オートエンコーダに対して3重のパイプライン処理を施すことで、回路を効率よくかつ高速に処理することができました。ハードウェアの設計はソフトウェアプログラミングと比べて、ロジック単位で記述できるため、
+
+### 3Dハザードマップ
+### ハザードマップの合成
 
 ## 7 参考文献
 [1]AMD-Xilinx: Zynq UltraScale+ MPSoC ZCU104 評価キット, 
