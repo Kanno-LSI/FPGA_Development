@@ -407,15 +407,6 @@ MH01AK60R00C21A6000000/)
 ソースコードを /src に載せています。
 フォルダ構造は以下の通りです。
 
-/src/HDL                                : HDLフォルダ
-/src/HDL/axi_stream_and_lite            : 通信回路
-/src/HDL/autoencoder                    : オートエンコーダ回路
-/src/HDL/sim_1                          : 回路シミュレーション
-
-/src/python                             : Pythonフォルダ
-/src/python/学習用                      : オートエンコーダ学習
-/src/python/pynq動作用                   : PYNQ
-
 <div align="center">
     <b>フォルダ構造</b> <!--テキスト表示-->
 
