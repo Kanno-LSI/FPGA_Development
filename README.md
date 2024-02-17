@@ -40,6 +40,7 @@ FPGAによるシステム開発です。2023年10月から2024年2月まで取�
   - [3Dハザードマップ](#〇-3Dハザードマップ)
   - [ハザードマップの合成](#〇-ハザードマップの合成)
 - [7.参考文献](#7-参考文献)
+- [8.ソースコード](#8-ソースコード)
 
 
 ## 1 概要
@@ -402,9 +403,23 @@ MH01AK60R00C21A6000000/)
 [7] Vivado Design Suite: AXI リファレンス ガイド(UG1037), 
 (https://docs.xilinx.com/v/u/ja-JP/ug1037-vivado-axi-reference-guide)
 
+## 8 ソースコード
+ソースコードを /src に載せています。
+フォルダ構造は以下の通りです。
 
+/src/HDL
 
+/src/HDL/axi_stream_and_lite
 
+/src/HDL/autoencoder
+
+/src/HDL/sim_1
+
+/src/python
+
+/src/python/学習用
+
+/src/python/pynq動作用
 
 
 
