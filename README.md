@@ -238,7 +238,7 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 データ転送の際には、大容量のデータの入出力を行う場合と、複数の制御信号の入出力を行う場合があります。そのため制御のしやすさを考慮すると、大容量データの扱いにはデータの連続転送（バースト転送）が行えるAXI-4 Stream、複数の制御信号の扱いにはアドレス指定で柔軟な制御が行えるAXI-4 Liteが適しています。今回、標高データと危険地帯データにはAXI-4 Stream、PS部との制御にはAXI-4 Liteを使用しました。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/71363d4b-4914-4d69-9a31-766eb0d2c88f" width="700">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/71363d4b-4914-4d69-9a31-766eb0d2c88f" width="1000">
     <br> <!--改行-->
     <b>AXI-4 通信回路</b> <!--テキスト表示-->
 </div>
@@ -277,7 +277,7 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 この回路は標高データの次元数32×32を隠れ層の次元数32まで圧縮する役割があります。学習により取得した重みと入力データを乗算、それらを隠れ層の次元ごとに加算、バイアスを加算し、最後に活性化関数であるReLU関数を適用します。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/25a79e6d-ab9b-4bac-9086-64379c7d22fb" width="700">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/25a79e6d-ab9b-4bac-9086-64379c7d22fb" width="1000">
     <br> <!--改行-->
     <b>エンコーダ回路</b> <!--テキスト表示-->
 </div>
@@ -286,7 +286,7 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 この回路は隠れ層の次元数32から、危険地帯データの次元数32×32に再構成する役割があります。計算の流れはエンコーダ回路と同様ですが、各処理ごとに処理の回数が異なるため、並列化やパイプラインの処理も異なっています。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/bdff6152-7ad2-4a95-b7b2-224979c66e0c" width="700">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/bdff6152-7ad2-4a95-b7b2-224979c66e0c" width="1000">
     <br> <!--改行-->
     <b>デコーダ回路</b> <!--テキスト表示-->
 </div>
