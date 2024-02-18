@@ -170,11 +170,13 @@ AMD-Xilinx社製FPGAのZynqを使用しました。本評価ボードはFPGAに�
     <b>Zynq Ultra Scale+ MPSoC ZCU104</b> <!--テキスト表示-->
 </div>
 
-<table><tr>
-<td>
-
 <div align="center">
-    <b>評価ボードの仕様</b> <!--テキスト表示-->
+    <table>
+        <tr>
+            <td>
+
+                <div align="center">
+                    <b>評価ボードの仕様</b> <!--テキスト表示-->
 
 |  |  |
 |-----------|-----------|
@@ -183,19 +185,22 @@ AMD-Xilinx社製FPGAのZynqを使用しました。本評価ボードはFPGAに�
 | DSP Slice  | 1,728 |
 | Bram  | 11[Mb] |
 | 開発環境  | Vivado 2023.1 |
+                </div>
+
+            </td>
+            <td>
+
+                <div align="center">
+                    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/ceff9c37-3b67-4db0-9659-75f31c6164e8" width="300">
+                    <br> <!--改行-->
+                    <b>Zynq Ultra Scale+ MPSoC ZCU104</b> <!--テキスト表示-->
+                </div>
+
+            </td>
+        </tr>
+    </table>
 </div>
 
-</td>
-<td>
-
-<div align="center">
-    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/ceff9c37-3b67-4db0-9659-75f31c6164e8" width="300">
-    <br> <!--改行-->
-    <b>Zynq Ultra Scale+ MPSoC ZCU104</b> <!--テキスト表示-->
-</div>
-
-</td>
-</tr></table>
 
 
 ### 〇 PS部とPL部の役割
