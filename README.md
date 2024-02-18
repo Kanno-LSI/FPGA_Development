@@ -151,49 +151,29 @@ FPGA (Field-Programmable Gate Array)はハードウェア記述言語によっ�
 ### 〇 使用するFPGA評価ボードについて
 AMD-Xilinx社製FPGAのZynqを使用しました。本評価ボードはFPGAに加えてSoCを搭載しています。そのため、計算負荷の大きい部分をFPGAによるPL(Programmable Logic)部に、アプリケーションの実装をSoCによるPS(Processing System)部に行うことで、評価ボード1台でシステムを完結させることができます。本評価ボードの詳細は以下の通りです。
 
-
-<div align="center">
-    <b>評価ボードの仕様</b> <!--テキスト表示-->
-
-|  |  |
-|-----------|-----------|
-| FPGA | Zynq Ultra Scale+ <br> MPSoC ZCU104 |
-| Logic Cell | 504,000 |
-| DSP Slice  | 1,728 |
-| Bram  | 11[Mb] |
-| 開発環境  | Vivado 2023.1 |
-</div>
-
-<div align="center">
-    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/ceff9c37-3b67-4db0-9659-75f31c6164e8" width="300">
-    <br> <!--改行-->
-    <b>Zynq Ultra Scale+ MPSoC ZCU104</b> <!--テキスト表示-->
-</div>
-
-
 <div align="center">
 <table><tr>
 <td>
 
 <div align="center">
-    <b>評価ボードの仕様</b> <!--テキスト表示-->
-
-|  |  |
-|-----------|-----------|
-| FPGA | Zynq Ultra Scale+ <br> MPSoC ZCU104 |
-| Logic Cell | 504,000 |
-| DSP Slice  | 1,728 |
-| Bram  | 11[Mb] |
-| 開発環境  | Vivado 2023.1 |
+    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/ceff9c37-3b67-4db0-9659-75f31c6164e8" width="300">
+    <br> <!--改行-->
+    <b>Zynq Ultra Scale+ MPSoC ZCU104</b> <!--テキスト表示-->
 </div>
 
 </td>
 <td>
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/ceff9c37-3b67-4db0-9659-75f31c6164e8" width="300">
-    <br> <!--改行-->
-    <b>Zynq Ultra Scale+ MPSoC ZCU104</b> <!--テキスト表示-->
+    <b>評価ボードの仕様</b> <!--テキスト表示-->
+
+|  |  |
+|-----------|-----------|
+| FPGA | Zynq Ultra Scale+ <br> MPSoC ZCU104 |
+| Logic Cell | 504,000 |
+| DSP Slice  | 1,728 |
+| Bram  | 11[Mb] |
+| 開発環境  | Vivado 2023.1 |
 </div>
 
 </td>
