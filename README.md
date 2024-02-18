@@ -112,16 +112,17 @@ PS部：ハザードマップの3D表示用アプリケーション
 オートエンコーダ（自己符号化器）とは、ニューラルネットワークの１つです。入力層と出力層の次元数が同一であり、入力情報を一旦圧縮し、そこから同じ次元数まで復元を行うネットワークとなっています。オートエンコーダは、入力データを圧縮して特徴量を抽出する「エンコーダ」と、圧縮された特徴量データを元のユニット数まで復元する「デコーダ」に分けられます。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/574b6c1d-e1b0-461e-acb2-2a2b162bbe7a" width="420">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/574b6c1d-e1b0-461e-acb2-2a2b162bbe7a" width="400">
     <br> <!--改行-->
     <b>オートエンコーダのモデル図</b> <!--テキスト表示-->
 </div>
 
+<br>
 
 オートエンコーダの応用例としてはコーデックやノイズ除去、画像補間などが挙げられますが、今回は**標高データから危険地帯を予測する**ために使用しています。標高データに対して、予測した危険地帯データを付加することでハザードマップを生成することができます。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/b91edddb-8eba-4a33-aca9-8ac1ebeb7010" width="450">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/b91edddb-8eba-4a33-aca9-8ac1ebeb7010" width="400">
     <br> <!--改行-->
     <b>オートエンコーダの役割</b> <!--テキスト表示-->
 </div>
@@ -181,8 +182,6 @@ AMD-Xilinx社製FPGAのZynqを使用しました。本評価ボードはFPGAに�
 </div>
 
 
-
-
 ### 〇 PS部とPL部の役割
 PS部とPL部は以下のような役割になっています。PL部ではオートエンコーダの推論計算、PS部ではハザードマップの3D表示を行っています。
 
@@ -191,6 +190,8 @@ PS部とPL部は以下のような役割になっています。PL部ではオ�
     <br> <!--改行-->
     <b>PS部とPL部の役割</b> <!--テキスト表示-->
 </div>
+
+<br>
 
 PS部の仕様は以下の通りです。なお、PS部のOSで使用しているPYNQ(Python Productivity for Zynq)は、AMD-Xilinx社が提供するオープンソースプロジェクトであり、Pythonを用いたアプリケーション開発やPL部とのデータ通信を行えます。
 
@@ -205,6 +206,8 @@ PS部の仕様は以下の通りです。なお、PS部のOSで使用してい�
 | コンパイラ  | g++ 11.2.0 |
 | 使用言語  | Python |
 </div>
+
+<br>
 
 ## 4 回路設計
 ### 〇 全体図
@@ -235,13 +238,12 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 データ転送の際には、大容量のデータの入出力を行う場合と、複数の制御信号の入出力を行う場合があります。そのため制御のしやすさを考慮すると、大容量データの扱いにはデータの連続転送（バースト転送）が行えるAXI-4 Stream、複数の制御信号の扱いにはアドレス指定で柔軟な制御が行えるAXI-4 Liteが適しています。今回、標高データと危険地帯データにはAXI-4 Stream、PS部との制御にはAXI-4 Liteを使用しました。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/71363d4b-4914-4d69-9a31-766eb0d2c88f" width="500">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/71363d4b-4914-4d69-9a31-766eb0d2c88f" width="700">
     <br> <!--改行-->
     <b>AXI-4 通信回路</b> <!--テキスト表示-->
 </div>
 
 #### 入出力回路
-
 この回路は入力データと出力データのコントロール回路です。オートエンコーダでの処理は32×32地点×8bit = 8192bitの入出力データを処理するため、AXI-4通信回路に合わせて64bitのデータを結合、分離する役割をしています。
 
 <div align="center">
@@ -275,7 +277,7 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 この回路は標高データの次元数32×32を隠れ層の次元数32まで圧縮する役割があります。学習により取得した重みと入力データを乗算、それらを隠れ層の次元ごとに加算、バイアスを加算し、最後に活性化関数であるReLU関数を適用します。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/25a79e6d-ab9b-4bac-9086-64379c7d22fb" width="500">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/25a79e6d-ab9b-4bac-9086-64379c7d22fb" width="700">
     <br> <!--改行-->
     <b>エンコーダ回路</b> <!--テキスト表示-->
 </div>
@@ -284,7 +286,7 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 この回路は隠れ層の次元数32から、危険地帯データの次元数32×32に再構成する役割があります。計算の流れはエンコーダ回路と同様ですが、各処理ごとに処理の回数が異なるため、並列化やパイプラインの処理も異なっています。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/bdff6152-7ad2-4a95-b7b2-224979c66e0c" width="500">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/bdff6152-7ad2-4a95-b7b2-224979c66e0c" width="700">
     <br> <!--改行-->
     <b>デコーダ回路</b> <!--テキスト表示-->
 </div>
@@ -299,7 +301,7 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 (c)はオートエンコーダのパイプライン化の様子です。エンコーダの処理は1043クロック、デコーダの処理は1050クロックと、必要クロック数が異なるため、ステートマシンによりタイミング制御を行うことでパイプライン化をしています。これにより複数セットの標高データを処理する場合には約2倍の処理時間が削減されます。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/b2821d4c-5de2-4a83-aa11-32b2a2b409b8" width="500">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/b2821d4c-5de2-4a83-aa11-32b2a2b409b8" width="400">
     <br> <!--改行-->
     <b>パイプライン化の概略図</b> <!--テキスト表示-->
 </div>
@@ -359,7 +361,7 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 実際に結果を見ると、標高の低い地帯が危険地帯に判断されていることが確認できます。この地域では２つの崖があり、このような地域から土砂崩れが発生する可能性があるため、大方所望の結果が出力されていることが確認できます。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/03471c6d-66b0-4c99-b589-6ee54aa079ac" width="500">
+    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/03471c6d-66b0-4c99-b589-6ee54aa079ac" width="700">
     <br> <!--改行-->
     <b>土砂災害のハザードマップ</b> <!--テキスト表示-->
 </div>
@@ -368,7 +370,7 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 続いて、洪水の結果です。この地域は図の左下の低地に氾濫平野が形成されており、洪水の危険性があります。ハザードマップにおいても、そのような低地が危険地帯として出力されています。しかし、標高が高い一部の地域でもハザードマップでは危険地帯として出力されています。これはオートエンコーダの計算精度が足りないことが原因だと考えられます。また、今回は標高データにのみ機械学習を適用した形であり、地盤の固さや水源の位置などもデータの入力要件や学習要件に加わると、より精度の良いハザードマップシステムが見込めます。残りの津波の結果については、「工夫点」の「ハザードマップの合成」をご覧ください。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/c394591c-746e-4495-9091-8d346bfb45fd" width="500">
+    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/c394591c-746e-4495-9091-8d346bfb45fd" width="700">
     <br> <!--改行-->
     <b>洪水のハザードマップ</b> <!--テキスト表示-->
 </div>
@@ -382,7 +384,7 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 オートエンコーダに対して3重のパイプライン処理を施すことで、回路を効率良くかつ高速に処理することができました。ハードウェアの設計はソフトウェアプログラミングと比べて、ロジック単位で記述できるため、並列化に加えてパイプライン化まで施すことができます。例えば下の図のように、1回の動作でA、B、C、D、Eの処理を順番に行うとします。パイプライン化をしない場合は、1つ目の動作がすべて終わった後に2つ目の動作を行う必要があります。パイプライン化を施すことで、1つ目の動作の途中に2つ目、3つ目、、の処理を同時に行うことができます。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/3e7a728c-63eb-49f7-a629-d18f0c7e83e7" width="500">
+    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/3e7a728c-63eb-49f7-a629-d18f0c7e83e7" width="300">
     <br> <!--改行-->
     <b>パイプライン処理</b> <!--テキスト表示-->
 </div>
