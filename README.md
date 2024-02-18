@@ -112,7 +112,7 @@ PS部：ハザードマップの3D表示用アプリケーション
 オートエンコーダ（自己符号化器）とは、ニューラルネットワークの１つです。入力層と出力層の次元数が同一であり、入力情報を一旦圧縮し、そこから同じ次元数まで復元を行うネットワークとなっています。オートエンコーダは、入力データを圧縮して特徴量を抽出する「エンコーダ」と、圧縮された特徴量データを元のユニット数まで復元する「デコーダ」に分けられます。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/574b6c1d-e1b0-461e-acb2-2a2b162bbe7a" width="450">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/574b6c1d-e1b0-461e-acb2-2a2b162bbe7a" width="420">
     <br> <!--改行-->
     <b>オートエンコーダのモデル図</b> <!--テキスト表示-->
 </div>
@@ -121,7 +121,7 @@ PS部：ハザードマップの3D表示用アプリケーション
 オートエンコーダの応用例としてはコーデックやノイズ除去、画像補間などが挙げられますが、今回は**標高データから危険地帯を予測する**ために使用しています。標高データに対して、予測した危険地帯データを付加することでハザードマップを生成することができます。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/b91edddb-8eba-4a33-aca9-8ac1ebeb7010" width="500">
+    <img src="https://github.com/Kanno-LSI/LSI_Design_Contest/assets/131650927/b91edddb-8eba-4a33-aca9-8ac1ebeb7010" width="450">
     <br> <!--改行-->
     <b>オートエンコーダの役割</b> <!--テキスト表示-->
 </div>
@@ -141,6 +141,8 @@ PS部：ハザードマップの3D表示用アプリケーション
 | 標高値の正規化 | データセットの最大値を255として<br> 0 ~ 255 (8bit) に正規化 |
 | データセット数  | 土砂災害用：2128セット <br> 洪水用：672セット <br> 津波用：952セット |
 </div>
+
+<br>
 
 ## 3 FPGA評価ボードの紹介
 ### 〇 FPGAとは
@@ -163,10 +165,38 @@ AMD-Xilinx社製FPGAのZynqを使用しました。本評価ボードはFPGAに�
 </div>
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/ceff9c37-3b67-4db0-9659-75f31c6164e8" width="500">
+    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/ceff9c37-3b67-4db0-9659-75f31c6164e8" width="300">
     <br> <!--改行-->
     <b>Zynq Ultra Scale+ MPSoC ZCU104</b> <!--テキスト表示-->
 </div>
+
+<table><tr>
+<td>
+
+<div align="center">
+    <b>評価ボードの仕様</b> <!--テキスト表示-->
+
+|  |  |
+|-----------|-----------|
+| FPGA | Zynq Ultra Scale+ <br> MPSoC ZCU104 |
+| Logic Cell | 504,000 |
+| DSP Slice  | 1,728 |
+| Bram  | 11[Mb] |
+| 開発環境  | Vivado 2023.1 |
+</div>
+
+</td>
+<td>
+
+<div align="center">
+    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/ceff9c37-3b67-4db0-9659-75f31c6164e8" width="300">
+    <br> <!--改行-->
+    <b>Zynq Ultra Scale+ MPSoC ZCU104</b> <!--テキスト表示-->
+</div>
+
+</td>
+</tr></table>
+
 
 ### 〇 PS部とPL部の役割
 PS部とPL部は以下のような役割になっています。PL部ではオートエンコーダの推論計算、PS部ではハザードマップの3D表示を行っています。
