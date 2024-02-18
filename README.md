@@ -361,16 +361,17 @@ PS部とPL部の通信にはAXI-4(Advanced eXtensible Interface 4)という通�
 実際に結果を見ると、標高の低い地帯が危険地帯に判断されていることが確認できます。この地域では２つの崖があり、このような地域から土砂崩れが発生する可能性があるため、大方所望の結果が出力されていることが確認できます。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/03471c6d-66b0-4c99-b589-6ee54aa079ac" width="700">
+    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/1a49c4b2-727e-4168-a725-7fb23467a614" width="700">
     <br> <!--改行-->
     <b>土砂災害のハザードマップ</b> <!--テキスト表示-->
 </div>
+
 
 #### 洪水
 続いて、洪水の結果です。この地域は図の左下の低地に氾濫平野が形成されており、洪水の危険性があります。ハザードマップにおいても、そのような低地が危険地帯として出力されています。しかし、標高が高い一部の地域でもハザードマップでは危険地帯として出力されています。これはオートエンコーダの計算精度が足りないことが原因だと考えられます。また、今回は標高データにのみ機械学習を適用した形であり、地盤の固さや水源の位置などもデータの入力要件や学習要件に加わると、より精度の良いハザードマップシステムが見込めます。残りの津波の結果については、「工夫点」の「ハザードマップの合成」をご覧ください。
 
 <div align="center">
-    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/c394591c-746e-4495-9091-8d346bfb45fd" width="700">
+    <img src="https://github.com/Kanno-LSI/FPGA_Development/assets/131650927/551a5726-dcb3-4d52-bb07-badbe3ff8839" width="700">
     <br> <!--改行-->
     <b>洪水のハザードマップ</b> <!--テキスト表示-->
 </div>
